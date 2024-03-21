@@ -1,0 +1,25 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: dbCluster1
+  region: ap-southeast-2
+
+nodeGroups:
+  - name: nodegrpslave-1
+    instanceType: t2.micro
+    desiredCapacity: 1
+    ssh:
+      allow: true 
+      enableSsm: true
+    labels:
+      nodegroup: nodegrpslave-1
+
+  - name: nodegrpslave-2
+    instanceType: t2.micro
+    desiredCapacity: 1
+    ssh:
+      allow: true
+      enableSsm: true
+    labels:
+      nodegroup: nodegrpslave-2
