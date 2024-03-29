@@ -10,7 +10,7 @@ rules:
 
 
 
-# user name is already created in side the IAM in the AWS and added to the AWS-AUTH UserMap-block with "arn-id".
+# user name is already created in side the IAM in the AWS and added to the AWS-AUTH UserMap-block with "arn-id" ---> refer aws-auth.yml file userMap  .
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
