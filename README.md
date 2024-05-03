@@ -1,3 +1,5 @@
+install kubectl for linux using install_kubectl.repo <br />
+
 create cluster in eks: <br />
 `  eksctl create cluster -f cluster1.yml `
 <br />
@@ -7,7 +9,7 @@ install the CSI-EBS driver: <br />
 ` kubectl apply -k "github.com/kubernetes-sigs/aws-ebs-csi-driver/deploy/kubernetes/overlays/stable/?ref=release-1.28" ` <br />
 <br />
 add the nodegroups to the existed cluster: <br />
-` eksctl create --name k8s_cluster_1 --version 1.29 --nodegroup-name nodeGroupDemo  --nodes 2 --nodes-min 2 --ssh-access --nodes-max 3 --instance-name k8s_slaves --enable-ssm --instance-types t2.micro `
+` eksctl create cluster --name k8s_cluster_1 --version 1.29 --nodegroup-name nodeGroupDemo  --nodes 2 --nodes-min 2 --ssh-access --nodes-max 3 --instance-name k8s_slaves --enable-ssm --instance-types t2.micro `
 <br /> 
 create deployment POD: <br/>
 `kubectl create deployment myweb --image=harinadh14/nodeapp:v1.0 `
