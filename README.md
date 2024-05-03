@@ -1,5 +1,18 @@
 install kubectl for linux using install_kubectl.repo <br />
 
+**install aws linuc CLI** <br />
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"<br />
+unzip awscliv2.zip<br />
+sudo ./aws/install<br />
+<br /><br /><br />
+
+**install eksctl - linux:**<br />
+curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp<br />
+sudo mv /tmp/eksctl /usr/local/bin <br />
+sudo chmod +x /usr/local/bin/eksctl <br />
+eksctl version <br />
+<br /><br /><br />
+
 create cluster in eks: <br />
 `  eksctl create cluster -f cluster1.yml `
 <br />
